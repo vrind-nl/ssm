@@ -1,0 +1,9 @@
+{
+  "name": "ssm",
+  "version": "0.0.1",
+  "description": "Solo Sailor's Mate",
+  "main": "index.js",
+  "author": "rene@steetskamp.nl",
+  "license": "MIT",
+  "private": true
+}
