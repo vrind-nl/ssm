@@ -1,3 +1,1 @@
-# PWA-template
-
-Template to get you started with your PWA in pure VanillaJS
+Test with `python3 -m http.server`.
