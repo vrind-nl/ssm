@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "rene@steetskamp.nl",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "geodesy": "^2.4.0"
+  }
 }

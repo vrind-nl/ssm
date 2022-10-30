@@ -1,0 +1,8 @@
+th {
+    text-align: left;
+    margin-right: 8pt;
+}
+
+th, td {padding: 3pt}
+
+thead tr, tr:nth-child(even) { background: #ddd; }

@@ -10,7 +10,7 @@
     <link rel="manifest" href="./manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-trip-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="My PWA">
     <link rel="apple-touch-icon" href="static/logo192.png">
 </head>
@@ -19,5 +19,64 @@
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <h1>Solo Sailor's Mate</h1>
-    <script src="./src/index.js"></script>
+    <nav>
+        <button onclick="nav('trace')">Trace</button>
+        <button onclick="nav('trip')">Trip</button>
+        <button onclick="nav('watch')">Watch</button>
+        <button onclick="nav('settings')">Settings</button>
+        <button onclick="nav('about')">About</button>
+    </nav>
+
+    <div id="trace" style="display: none">
+        <h3>Trace</h3>
+        <div id="traceContent">Waiting for GPS fix...</div>
+    </div>
+
+    <div id="trip" style="display: none">
+        <h3>Trip</h3>
+        <div id="tripContent">Waiting for GPS fix...</div>
+    </div>
+
+    <div id="watch" style="display: none">
+        <h3>Watch</h3>
+
+        <form>
+            <label>Wakeup period (mins):<input id="wakeupPeriod"/></label>
+        </form>
+
+    </div>
+
+    <div id="settings" style="display: none">
+        <h3>Settings</h3>
+        
+        <form>
+            <label>Waypoint period (hrs):<input id="waypointPeriod"/></label>
+        </form>
+    </div>
+
+    <div id="about">
+        <h3>About</h3>
+        <p>Solo Sailor's Mate (SSM) is a simple tool to help a solo sailor.</p>
+        <p>It has two basic functions:
+            <ol>
+                <li>The <i>Trace</i> function traces your historic positions, including distance, speed over ground, and course.</li>
+                <li>The <i>Trip</i> function traces your progress over 6 hour intervals. You can record this information in your log.</li>
+                <li>The <i>Watch</i> function plays an alarm at set intervals to wake you up between naps.</li>
+            </ol>
+        </p>
+        <p>SSM can be useful:
+            <ul>
+                <li>if the solo sailor cannot afford expensive electronics (SSM works on any phone with GPS), or</li>
+                <li>as a backup when said electronics fail.</li>
+            </ul>
+        </p>
+        <p>You can install SSM on your phone, so you can use it even when your off-line.</p>
+        <p>SSM is designed to have minimal dependencies:
+            <ul>
+                <li>It uses <a href="http://www.movable-type.co.uk/scripts/geodesy-library.html">Geodesy</a> for geodesic calculations.</li>
+            </ul>
+        </p>
+    </div>
+
+    <script src="./index.js" type="module"></script>
 </body>
